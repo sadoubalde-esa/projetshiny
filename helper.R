@@ -14,7 +14,7 @@ library(stringr)
 # fonctions Data -------------------------------------------------------
 read.data <- function() {
   
-  data<- read.xlsx2("./train.xlsx", sheetIndex = 1,
+  data<- read.xlsx2("./data.xlsx", sheetIndex = 1,
                          colClasses = c("numeric", "numeric", 
                                         "numeric","numeric", 
                                         "numeric","numeric",
