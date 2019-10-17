@@ -7,15 +7,35 @@
 #    http://shiny.rstudio.com/
 #
 
-library(shiny) 
-library(e1071)
-library(kernlab)  
-library(lattice)
-library(ggplot2)
-library(caret) 
-library(plotROC) 
-library(tidyverse)  
-library(grid)
+require(shiny) 
+require(e1071)
+require(kernlab)  
+require(lattice)
+require(ggplot2)
+require(caret) 
+require(plotROC) 
+require(tidyverse)  
+require(grid) 
+
+require(dplyr)
+require(lubridate)
+require(xlsx)
+require(scales)
+
+require(rCharts)
+require(DT)
+require(leaflet)
+require(plotly) 
+
+##data 
+
+source("./helper.R", local=T) 
+
+data <- read.data() # helper.R function 
+test <- read.est() # helper.R function 
+
+# Setup inputs
+
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output){ 
@@ -26,14 +46,7 @@ shinyServer(function(input, output){
     N=input$N 
     d=input$d
     
-    OBS=1:nrow(DONNEE)   
-    Time=scale(as.numeric(DONNEE$Time),center=T,scale=T) 
-    DONNEE$Time=Time 
-    data_base=data.frame(OBS,DONNEE)
     
-    #mes donnees avec tirage alealtoire de N observation
-    train=sample(1:nrow(data_base),N) 
-    data=data_base[train,-1]
     attach(data)   
     
     #creation des graphiques de 9 variables a partir de la d ieme variable: min(d)=1,max(d)=22
@@ -66,32 +79,15 @@ shinyServer(function(input, output){
     N=input$N 
     d=input$d
     
-    OBS=1:nrow(DONNEE)   
-    Time=scale(as.numeric(DONNEE$Time),center=T,scale=T) 
-    DONNEE$Time=Time 
-    data_base=data.frame(OBS,DONNEE)
-    
-    #mes donnees avec tirage alealtoire de N observation
-    train=sample(1:nrow(data_base),N) 
-    data=data_base[train,-1]
     attach(data)  
     round(cor(data),4) 
+    
   }) 
   
   output$scatter=renderPlot({   
     N=input$N 
     d=input$d   
-    
-    
-    OBS=1:nrow(DONNEE)   
-    Time=scale(as.numeric(DONNEE$Time),center=T,scale=T) 
-    DONNEE$Time=Time 
-    data_base=data.frame(OBS,DONNEE)
-    
-    train=sample(1:nrow(data_base),N) 
-    data=data_base[train,-1]
-    attach(data)  
-    
+   
     plot(data[,2],data[,d],col=c(4,3))
     
   })
@@ -101,28 +97,7 @@ shinyServer(function(input, output){
   output$linear=renderPlot({    
     N=input$N
     V=ceiling(0.3*N) 
-    
-    
-    OBS=1:nrow(DONNEE)   
-    Time=scale(as.numeric(DONNEE$Time),center=T,scale=T) 
-    DONNEE$Time=Time 
-    data_base=data.frame(OBS,DONNEE)
-    
-    
-    #mes donnees avec tirage alealtoire de N observation pour lechantillon test
-    train=sample(1:nrow(data_base),N)  
-    
-    #pour lechantillon de validation
-    valid=sample(1:nrow(data_base),V) 
-    
-    # les 2 echantillons
-    test=data_base[valid,-1]
-    data=data_base[train,-1]
-    
-    attach(data)   
-    attach(test) 
-    
-    #definition de la variable cible test 
+  
     y=test$Class
     
     RSSl=vector() 
@@ -148,26 +123,6 @@ shinyServer(function(input, output){
     N=input$N
     V=ceiling(0.3*N) 
     
-    
-    OBS=1:nrow(DONNEE)   
-    Time=scale(as.numeric(DONNEE$Time),center=T,scale=T) 
-    DONNEE$Time=Time 
-    data_base=data.frame(OBS,DONNEE)
-    
-    
-    #mes donnees avec tirage alealtoire de N observation pour lechantillon test
-    train=sample(1:nrow(data_base),N)  
-    
-    #pour lechantillon de validation
-    valid=sample(1:nrow(data_base),V) 
-    
-    # les 2 echantillons
-    test=data_base[valid,-1]
-    data=data_base[train,-1]
-    
-    attach(data)   
-    attach(test) 
-    
     #definition de la variable cible test 
     y=test$Class
     RSSp=vector() 
@@ -191,26 +146,6 @@ shinyServer(function(input, output){
     
     N=input$N
     V=ceiling(0.3*N) 
-    
-    
-    OBS=1:nrow(DONNEE)   
-    Time=scale(as.numeric(DONNEE$Time),center=T,scale=T) 
-    DONNEE$Time=Time 
-    data_base=data.frame(OBS,DONNEE)
-    
-    
-    #mes donnees avec tirage alealtoire de N observation pour lechantillon test
-    train=sample(1:nrow(data_base),N)  
-    
-    #pour lechantillon de validation
-    valid=sample(1:nrow(data_base),V) 
-    
-    # les 2 echantillons
-    test=data_base[valid,-1]
-    data=data_base[train,-1]
-    
-    attach(data)   
-    attach(test) 
     
     #definition de la variable cible test 
     y=test$Class  
@@ -243,26 +178,6 @@ shinyServer(function(input, output){
     #les input de la performance 
     deg=input$degree 
     co=input$coef
-    
-    
-    OBS=1:nrow(DONNEE)   
-    Time=scale(as.numeric(DONNEE$Time),center=T,scale=T) 
-    DONNEE$Time=Time 
-    data_base=data.frame(OBS,DONNEE)
-    
-    
-    #mes donnees avec tirage alealtoire de N observation pour lechantillon test
-    train=sample(1:nrow(data_base),N)  
-    
-    #pour lechantillon de validation
-    valid=sample(1:nrow(data_base),V) 
-    
-    # les 2 echantillons
-    test=data_base[valid,-1]
-    data=data_base[train,-1]
-    
-    attach(data)   
-    attach(test) 
     
     #les library 
     library(kernlab)  
