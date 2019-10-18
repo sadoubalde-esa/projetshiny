@@ -12,12 +12,5 @@ apt_packages:
 r_packages:
   - rsconnect
   - shiny
-  - tidyverse
-  - rmarkdown
-  - kernlab 
-  - xlsx
-  - ggplot2
-  - lattice
-  - shinythemes 
 script:
   - r -f deploy.R
