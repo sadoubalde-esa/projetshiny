@@ -20,4 +20,4 @@ r_packages:
   - lattice
   - shinythemes 
 script:
-  - R -f deploy.R
+  - r -f deploy.R
