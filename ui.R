@@ -95,12 +95,8 @@ shinyUI(navbarPage(
         )#tabsetpanel
       ) #mainpanel 
     )#sidebarlayout
-  ),#tabpanel de la fenetre  
+  )#tabpanel de la fenetre  
   
-  tabPanel("A Propos du SVM",
-           mainPanel(column(8, offset = 2, includeMarkdown(""))
-           )
-  ) # 
   
 )#navbarpage
 )
