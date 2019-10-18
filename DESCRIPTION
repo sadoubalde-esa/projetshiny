@@ -1,3 +1,27 @@
-
+Imports:
+  shiny,
+  shinytest,
+  rsconnect,  
+  tidyverse,  
+  kableExtra,   
+  rmarkdown,   
+  kernlab,     
+  ggplot2,       
+  lattice,     
+  caret, 
+  plotROC,  
+  shinythemes,  
+  plotly,  
+  shinythemes,   
+  xlsx,  
+  dplyr,  
+  lubridate,  
+  tidyr,  
+  stringr
+  
 Packages: shinyAppDemo
-Type: shiny
+Type: shiny 
+
+Remotes:
+  rstudio/shiny,
+  rstudio/shinytest@dev
