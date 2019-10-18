@@ -22,9 +22,8 @@ require(lubridate)
 require(xlsx)
 require(scales)
 
-require(rCharts)
+
 require(DT)
-require(leaflet)
 require(plotly) 
 
 ##data 
