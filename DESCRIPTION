@@ -1,25 +1,5 @@
 Packages: shinyAppDemo
 Type: shiny
 
-Imports:
-  shiny,
-  shinytest,
-  rsconnect,  
-  tidyverse,  
-  kableExtra,   
-  rmarkdown,   
-  kernlab,     
-  ggplot2,       
-  lattice,     
-  caret, 
-  plotROC,  
-  shinythemes,  
-  plotly,  
-  shinythemes,   
-  xlsx,  
-  dplyr,  
-  lubridate,  
-  tidyr,  
-  stringr
-  
+
 
