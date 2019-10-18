@@ -1,4 +1,4 @@
-dist: xenial
+dist: trusty
 sudo: false
 latex: true
 language: r
@@ -14,9 +14,10 @@ r_packages:
   - shiny
   - tidyverse
   - rmarkdown
-  - kernlab
+  - kernlab 
+  - xlsx
   - ggplot2
   - lattice
-  - shinythemes
+  - shinythemes 
 script:
   - R -f deploy.R
