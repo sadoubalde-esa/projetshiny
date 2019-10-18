@@ -1,11 +1,12 @@
-dist: trusty
+dist: xenial
 language: r
 sudo: false
-r: 3.6.1   
+r: release    
+
+warnings_are_error: false
 
 cache:
-  # Main R library
-  packages: true
+  packages: true 
   
 r_packages:
 
