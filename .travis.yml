@@ -63,4 +63,8 @@ r_packages:
 
 script:
 
-  - R -f deploy.R
+  - R -f deploy.R   
+  
+  - server.R  
+  
+  - ui.R
