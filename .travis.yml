@@ -25,20 +25,6 @@ r_packages:
   - rsconnect
 
   - shiny
-
-  - tidyverse
-
-  - kableExtra
-  
-  - rmarkdown
-  
-  - kernlab
-  
-  - ggplot2
-  
-  - lattice
- 
-  - plotly
   
 script:
 
