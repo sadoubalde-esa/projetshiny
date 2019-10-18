@@ -3,21 +3,9 @@ language: r
 sudo: false
 r: 3.6.1   
 
-
-
 cache:
   # Main R library
   packages: true
-  
-  directories:
-    
-    - travis_phantomjs
-
-apt_packages:  
-
-  - libgdal-dev   
-  
-  - libudunits2-dev   
   
 r_packages:
 
@@ -61,6 +49,4 @@ r_packages:
 
 script:
 
-  - server.R  
-  
-  - ui.R
+  - R -f deploy.R
