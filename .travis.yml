@@ -11,6 +11,7 @@ apt_packages:
   - libudunits2-dev
 r_packages:
   - rsconnect
-  - shiny
+  - shiny 
+  - littler
 script:
-  - r -f deploy.R
+  - R -f deploy.R
