@@ -2,7 +2,7 @@ dist: xenial
 sudo: false
 latex: true
 language: r
-r: release
+r: 3.6.1
 warnings_are_errors: false
 cache:
   packages: true
@@ -17,8 +17,6 @@ r_packages:
   - kernlab
   - ggplot2
   - lattice
-  - plotROC
   - shinythemes
-  - plotly
 script:
   - R -f deploy.R
