@@ -37,12 +37,6 @@ r_packages:
   - ggplot2
   
   - lattice
-  
-  - caret
-  
-  - plotROC
-  
-  - shinythemes
  
   - plotly
   
