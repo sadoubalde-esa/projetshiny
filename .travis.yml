@@ -1,17 +1,51 @@
-dist: trusty
+dist: xenial
+
 sudo: false
+
 latex: true
+
 language: r
-r: 3.6.1
+
+r: releases
+
 warnings_are_errors: false
+
 cache:
+
   packages: true
+  
 apt_packages:
+
   - libgdal-dev
+
   - libudunits2-dev
+
 r_packages:
+
   - rsconnect
-  - shiny 
-  - littler
+
+  - shiny
+
+  - tidyverse
+
+  - kableExtra
+  
+  - rmarkdown
+  
+  - kernlab
+  
+  - ggplot2
+  
+  - lattice
+  
+  - caret
+  
+  - plotROC
+  
+  - shinythemes
+ 
+  - plotly
+  
 script:
+
   - R -f deploy.R
