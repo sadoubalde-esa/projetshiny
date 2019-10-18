@@ -16,8 +16,6 @@ Imports:
   lattice, 
   plotly 
   
-URL: http://shiny.rstudio.com
-BugReports: https://github.com/rstudio/shiny/issues
 
 
 
