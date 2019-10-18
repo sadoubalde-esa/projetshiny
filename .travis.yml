@@ -1,19 +1,21 @@
-
+dist: trusty
 language: r
-
-dist: xenial
-
 sudo: false
+r: 3.6.1   
 
-latex: true
-
-r: release
-
-warnings_are_errors: false
+install:
+  - R -e 'if (system.file(package="packrat") == "") install.packages("packrat")'
+  - R -e "packrat::packify(); packrat::restore()"  
 
 cache:
-
+  # Main R library
   packages: true
+  
+  directories:
+    # Packrat packages
+    - packrat/lib
+    # PhantomJS
+    - travis_phantomjs
 
 apt_packages:  
 
@@ -63,8 +65,6 @@ r_packages:
 
 script:
 
-  - R -f deploy.R   
-  
   - server.R  
   
   - ui.R
