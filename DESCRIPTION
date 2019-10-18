@@ -1,5 +1,16 @@
-Packages: shinyAppDemo
-Type: shiny
+Imports:
+  shiny,
+  shinytest, 
+  tidyverse, 
+  kableExtra, 
+  rmarkdown, 
+  kernlab, 
+  ggplot2, 
+  lattice, 
+  plotly
+
+
+
 
 
 
