@@ -1,9 +1,5 @@
 Package: shiny
 Type: Package 
-
-Depends:
-    R (>= 3.0.2),
-    methods 
     
 Imports:
   shiny,
