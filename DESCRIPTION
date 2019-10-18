@@ -3,14 +3,7 @@ Type: Package
     
 Imports:
   shiny,
-  shinytest, 
-  tidyverse, 
-  kableExtra, 
-  rmarkdown, 
-  kernlab, 
-  ggplot2, 
-  lattice, 
-  plotly 
+  shinytest 
   
 
 
