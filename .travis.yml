@@ -3,18 +3,14 @@ language: r
 sudo: false
 r: 3.6.1   
 
-install:
-  - R -e 'if (system.file(package="packrat") == "") install.packages("packrat")'
-  - R -e "packrat::packify(); packrat::restore()"  
+
 
 cache:
   # Main R library
   packages: true
   
   directories:
-    # Packrat packages
-    - packrat/lib
-    # PhantomJS
+    
     - travis_phantomjs
 
 apt_packages:  
