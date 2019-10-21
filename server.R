@@ -28,10 +28,7 @@ require(plotly)
 
 ##data 
 
-source("./helper.R", local=T) 
 
-data <- read.data() # helper.R function 
-test <- read.est() # helper.R function 
 
 # Setup inputs
 
