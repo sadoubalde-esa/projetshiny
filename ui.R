@@ -181,8 +181,8 @@ shinyUI(navbarPage(
                                 tabPanel(p(icon("table"),"Arbres de décision"),
                                        fluidRow(h3( align=h3.align)),
                                           fluidRow(
-                                              column(11, h4( align="center"),
-                                                 includeMarkdown("")),
+                                              column(11, h4( align="center")
+                                                 ),
                                     
                                           fluidRow( 
                                               column(11, h3("Arbre de décision", align="center"),
