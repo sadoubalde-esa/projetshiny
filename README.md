@@ -15,7 +15,7 @@ Toutefois il est possible de trouver cette fronti√®re en supposant que les donn√
 
 
   
-  ![SVM](C:/Users/farid/Pictures/svmm.PNG){width=10cm}
+  ![SVM](C:/Users/farid/Pictures/svmm.PNG)
   
   
   
