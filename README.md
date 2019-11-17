@@ -1,12 +1,4 @@
----
-title: "Report"
-author: "Farida et Sadou"
-date: "22 septembre 2019"
-output:
-  html_document:
-    df_print: paged
-  word_document: default
----
+
 <span style="color: #fb4141">**Machine à vecteur de support: SVM**</span> 
  
  <div style="text-align: justify">  **Contexte de l'étude**
