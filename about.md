@@ -1,28 +1,18 @@
----
-title: "Untitled"
-output: html_document
----
+ **2.Description des données du projet**
+    
+     a.Variables utilisées
+     
+  | Variables | Type         |         Signification                                                  |
+   | :--------:|:------------:|:----------------------------------------------------------------------:|
+   | Time      | qualitatif   | Temps écoulé en seconde entre la transaction fraduleuse et la 1ère    |
+   | V1-V28    | quantitatif  | Resultat d'une analyse en composante principale                        |
+   | Amount    | quantitatif  | Montant de la transaction                                              |
+   | Class     | quantitatif  | 1 si la transaction est frauduleuse 0 si non   |
+   
+   
+     b.Traitement de la base de données et Partionnement 
+  
+Notre base de données est très deséquilibrée, nous avons 0,17% de transactions frauduleuses contre 99,9% de transactions légitimes.Ceci est est problématique pour appliquer notre modèle de prédiction car la majorité dominera les calculs et rendra difficile la construction d'un classifieur précis .
+En conséquent nous avons rééquilibré la base de données avec la technique de l'oversampling afin d'obtenir un equilibre entre les deux classes.
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
