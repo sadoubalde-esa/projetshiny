@@ -206,8 +206,8 @@ shinyUI(navbarPage(
                                     tabPanel(p(icon("table"),"Gradient boosting"),
                                             fluidRow(h3( align=h3.align)),
                                                  fluidRow(
-                                                     column(11, h4( align="center"),
-                                                        includeMarkdown("")),
+                                                     column(11, h4( align="center")
+                                                        ),
                                            
                                                   fluidRow( 
                                                      column(11, h3("Performance du Gradient boosting ", align="center"),
