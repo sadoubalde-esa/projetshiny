@@ -1,7 +1,7 @@
 
 <span style="color: #fb4141">**Machine à vecteur de support: SVM**</span> 
  
- <div style="text-align: justify">  **Contexte de l'étude**
+ <div style="text-align: justify">  **Contexte de l'étude
   
    La fraude à la carte bancaire est un sujet complexe qui touche des millions de personnes chaque année. Les algorithmes développés doivent être capables de s'adapter tout autant aux spécificités des données de transaction qu'à celles des fraudes. C’est dans ce cadre que nous présentons ici un démonstrateur utilisant les machines à vecteurs de support (SVM) comme algorithme tout en ayant une phase masquée de la complexité algorithmique développée dans les logiciels (utilisable par tous les collaborateurs).
 
