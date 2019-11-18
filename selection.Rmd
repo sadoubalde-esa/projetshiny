@@ -1,0 +1,13 @@
+---
+title: ""
+output: html_document
+---
+
+<div style="text-align: justify">L'algorithme classe les transactions par construction d'une fonction de décision.  
+Si la fonction de décision est (positive, négative ou nulle), la transaction est identifiée  
+respectivement comme étant (frauduleuse, non frauduleuse, point support). Cependant, cette     
+fonction de décision a été transformée en une probabilité. Nous avons ainsi évalué    
+par **Noyau kernel:** (*poly=polynomial, rad=radial, lin=linear*) la probabilité qu'une      
+transaction soit frauduleuse ou non. La transaction est donc affectée à la classe la plus probable.    
+Une discrimination est aussi faite entre les noyaux par minimisation  du taux d'erreur de Validation.</div>     
+ 

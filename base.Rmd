@@ -1,0 +1,8 @@
+---
+title: ""
+output: html_document
+---
+
+
+**Présentation des  données utilisées tout au long  de la démonstration:**  
+<div style="text-align: justify">Elles proviennent de la  plateforme kaggle organisant des compétitions en data science.Time: Temps écoulé en séconde entre la transaction fraduleuse et la première transaction. V1-V28: Résultat d'une analyse en composante principale. Amount: Montant de la transaction. Class: 1 si la transaction est frauduleuse 0 si non. </div> 

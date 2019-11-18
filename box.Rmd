@@ -1,0 +1,7 @@
+---
+title: ""
+output: html_document
+---
+
+**Quelle relation avec la variable cible?**    
+<div style="text-align: justify">Le graphique permet d'analyser l'association  des  prédicteurs à chacune des classes de la variable cible. L'absence de relation est traduite par le parallelisme des centres de la distribution (médiane par defaut). Le graphique met également  en évidence la présence d'outliers matérialisés par les points  au dessus de la boite  à moustaches.</div>

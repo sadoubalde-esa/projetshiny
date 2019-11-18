@@ -1,0 +1,9 @@
+---
+title:  ""
+output: html_document
+---
+
+
+**Pourquoi?**
+
+<div style="text-align: justify"> La matrice des corréllations est utilisée pour évaluer une possible association linéaire et éventuellemment la  redondance des variables dans la base de données. Des corréllations aussi faibles montrent l'absence de redondance des variables, car celles -ci proviennent d'un regroupement par analyse en composante principale PCA.</div>   

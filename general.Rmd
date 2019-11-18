@@ -1,0 +1,41 @@
+---
+title: ""
+output: html_document
+---
+
+  
+<div style="text-align: justify">Particulièrement récentes (1995),les SVM (machines  à vecteurs de support ) est un ensemble de techniques d' apprentissage supervisé destinées à résoudre des problèmes de classication ou de régression. Dans le cadre  de cet démonstrateur, seul le problème de classication sera abordé.        
+
+     
+L'objectif est de construire un algorithme qui permet de décider la classe d'appartenance d'une transaction (frauduleuse ou non) sur les cartes de crédits de façon à maximiser la marge séparatrice. C'est-à-dire distinguer les transactions par une frontière appellée hyperplan séparateur. </div>   
+
+
+**Quelle hypothèse formulée sur la forme de  l'hyperplan séparateur?**     
+
+
+**1. On suppose que les données de l'échantillon peuvent être linéairement séparables.**       
+ 
+<div style="text-align: justify">-La solution consiste à formuler le problème comme un problème d'optimisation quadratique.-Trouver cette frontière séparatrice optimale à partir d'un ensemble d'apprentissage.        
+-Dans les SVM, la frontière de séparation optimale est choisie comme celle qui maximise la marge.       
+-La marge est la distance entre la frontière (hyperplan) et les observations les plus        
+ proches. Ces derniers sont appelés vecteurs supports.</div>  
+ **Dans la réalité, il est très rare que des données soient linéairement séparables.** 
+ 
+
+ **2. Les données sont presque linéairment séparables.**      
+ Certaines transactions peuvent se situer du mauvais coté de la frontière: erreurs de classifications.      
+ 
+**Mise en place du Soft margin:** 
+<div style="text-align: justify"> C'est une solution qui consiste à introduire des variables de ressorts ( **slack variables** ) qui permettent de faire l'abitrage entre maximiser la marge et minimiser le taux d'erreur de classification. Cet arbitarage est fait par introduction d'un hyperparamètre  appelé coût   de pénalisation lié au fait qu'on autorise certaines transactions à être mal clasées.  Sachant  que l'algorithme du svm est très sensible au paramètre de penalité induit par les variables de ressorts, le choix de cet      
+hyperparamètre  constitue l'une des parties les plus importantes pour le reste de l'analyse.</div> 
+
+ **Dans 99% des cas, les données étudiées ne répondent pas aux 2 premières hypothèses formulées.**    
+ 
+ 
+
+**3. Les données ne sont pas linéairement séparables**      
+
+<div style="text-align: justify"> Dans le cas où les données ne sont pas lineairement séparables, l'idée clé des SVM est de transformer l'espace de représentation des données d'entrées en un espace de plus grande dimension (possiblement de dimension infinie), dans lequel il est probable qu'il existe une séparation linéaire. L'astuce consiste à utiliser une fonction noyau qui ne nécessite pas la connaissance explicite de la transformation à appliquer pour le changement d'espace. Les fonctions noyau permettent de transformer un produit scalaire (calcul coûteux dans un espace de grande dimension) en une simple évaluation ponctuelle d'une fonction. </div>  
+
+
+ 

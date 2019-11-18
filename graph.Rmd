@@ -1,0 +1,7 @@
+---
+title: ""
+output: html_document
+---
+
+**Les données sont -elles normalement distribuées?:**
+<div style="text-align: justify">Les variables ont été representées par des histogrammes. Il s’agit de verifier la normalité des données. Certaines  ne sont pas normalement distribuées  mais comme l'échantillon est suffisamment grand, nous avons une convergence en  loi.</div> 

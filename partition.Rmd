@@ -1,0 +1,21 @@
+---
+title: ""
+output: html_document
+---
+
+**Partition: Echantillon d'apprentissage - Echantillon de validation**     
+**Pourquoi la partition?**  
+<div style="text-align: justify">Evaluer le modèle sur les données  sur lesquelles il a été ajusté conduit à une évaluation biaisée.
+La partition a donc pour objectif d'ajuster le modèle sur des données d'apprentissage et l'évaluer  sur          
+des données de validation. Avec la méthode **hold out**,  70%  est mis par défaut pour l'apprentissage  
+et 30% pour l'évaluation du modèle.</div>    
+
+
+
+**La partition a-t-elle conservée la structure de la population?**  
+<div style="text-align: justify"> La structure de la population est conservée lorsque la proportion des transactions frauduleuses dans la   
+population et la même que celle attendue  dans les autres échantillons. La non conservation de la structure       
+(oversampling) conduirait à une surestimation des probabilités prédites (prédire une transaction non frauduleuse      
+comme étant frauduleuse). Etant donné que l'évènement **fraude** est relativement très rare,  la correction du risque    
+d'oversampling est faite par construction d'une population constituée de toutes les transactions frauduleuses et un 
+tirage aléatoire stratifié sur le reste des données. La structure est ainsi conservée avec la méthode **hold out** .</div>             

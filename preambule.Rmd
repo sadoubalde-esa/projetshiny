@@ -1,0 +1,8 @@
+---
+title: ""
+output: html_document
+---
+
+ <div style="text-align: justify">La fraude à la carte bancaire touche des millions de transactions chaque année. Bien qu’elle soit de plus en plus sophistiquée, les algorithmes de machine Learning peuvent être  sollicités grâce notamment à leurs capacités à traiter des données pour en faire ressortir d’informations à partir desquelles différents systèmes et utilisateurs seront en mesure d’identifier s’il y a une fraude. C’est dans ce cadre que nous présentons ici un démonstrateur utilisant les machines à vecteurs de support (SVM) comme algorithme tout en ayant une phase masquée de la complexité algorithmique développée dans les logiciels (utilisable par tous les collaborateurs).</div> 
+
+ 

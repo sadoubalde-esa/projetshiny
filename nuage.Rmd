@@ -1,0 +1,9 @@
+---
+title: ""
+output: html_document
+---
+
+**Quel lien entre les variables inputs?**
+
+<div style="text-align: justify"> Le nuage des points ou diagramme de dispersion permet d'illustrer  le degré de corrélation entre les variables, la dispersion et éventuellemnt la présence d'outliers dans les données. 
+On peut détecter l'absence de corrélation par distribution aléatoire du nuage.</div>  
