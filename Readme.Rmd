@@ -1,7 +1,6 @@
 ---
 title: "Readme"
 author: "Farida & Sadou"
-date: "22 septembre 2019"
 output:
   html_document:
     df_print: paged
